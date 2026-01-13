@@ -1,0 +1,226 @@
+/* =========================
+   RESET PADRÃO DO NAVEGADOR
+   ========================= */
+
+/* Remove margens e espaçamentos padrão
+   e garante que padding e border não
+   aumentem o tamanho dos elementos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   ESTILO GLOBAL DO SITE
+   ========================= */
+
+/* Define fonte padrão, cores base
+   e melhora a leitura dos textos */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER (TOPO DO SITE)
+   ========================= */
+
+/* Container principal do cabeçalho */
+
+/* HEADER */
+.header {
+    background-color: #1e1e1e;            /* Fundo escuro */
+    color: #fff;                          /* Texto branco */
+    padding: 30px 20px;                     /* Espaçamento interno */
+    text-align: center;                     /* Centraliza textos */
+    width: 100%;                            /* Ocupa toda a largura */
+}
+
+/* Nome principal */
+.header h1 {
+    margin: 0;
+    font-size: 2.8rem;                      /* Tamanho grande para destaque */
+    font-weight: bold;
+}
+
+/* Subtítulo */
+.header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.85;                          /* Deixa o texto levemente suave */
+}
+
+/* =========================
+   SEÇÕES (CARDS DO CONTEÚDO)
+   ========================= */
+
+/* Estilo padrão das seções */
+
+/* SECTIONS */
+.section {
+    background: #fff;                     /* Fundo branco */     
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;                     /* Bordas arredondadas */
+}
+
+/* Título das seções */
+.section h2 {
+    margin-bottom: 10px;
+    color: #1e1e1e;
+}
+
+/* =========================
+   LISTA DE TECNOLOGIAS
+   ========================= */
+
+/* Container das tecnologias */
+.tech-list {
+    display: flex;                           /* Layout flexível */
+    flex-wrap: wrap;                         /* Quebra linha se necessário */
+    gap: 10px;                               /* Espaçamento entre itens */
+}
+
+/* Cada tecnologia */
+.tech-list li {
+    list-style: none;                        /* Remove bolinhas */
+    background: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* =========================
+   PROJETOS
+   ========================= */
+
+/* Container do projeto */
+.project {
+    margin-top: 10px;
+}
+
+/* Link do projeto */
+.project a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;                    /* Remove sublinhado */
+    color: #0066cc;                         /* Azul padrão de link */
+}
+/* =========================
+   FOOTER (RODAPÉ)
+   ========================= */
+
+/* Rodapé simples e centralizado */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+}
+
+/* =========================
+   RESPONSIVIDADE - DESKTOP
+   ========================= */
+
+/* Ajustes para telas maiores */
+@media (min-width: 768px) {
+    .section {
+        max-width: 900px;                   /* Limita largura */
+        margin: 20px auto;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE - MOBILE
+   ========================= */
+
+/* Ajustes para telas pequenas */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+}
+
+/* =========================
+   MODO ESCURO
+   ========================= */
+
+/* Força títulos claros no modo escuro */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #ffffff;
+}
+
+/* Destaque visual nos títulos h2 */
+.dark-mode h2 {
+    border-left: 4px solid #4da3ff;
+    padding-left: 10px;
+}
+
+/* =========================
+   BOTÃO MODO ESCURO
+   ========================= */
+
+/* Estilo do botão de alternância */
+#darkModeBtn {
+    margin-top: 20px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: #1e1e1e;
+    transition: 0.3s;                       /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+#darkModeBtn:hover {
+    opacity: 0.8;
+}
+
+/* =========================
+   ESTILOS GERAIS DO MODO ESCURO
+   ========================= */
+
+/* Fundo e texto do site */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Fundo das seções */
+.dark-mode .section {
+    background-color: #1e1e1e;
+}
+
+/* Header no modo escuro */
+.dark-mode .header {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+}
+
+/* Tecnologias no modo escuro */
+.dark-mode .tech-list li {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Links no modo escuro */
+.dark-mode a {
+    color: #4da3ff;
+}
